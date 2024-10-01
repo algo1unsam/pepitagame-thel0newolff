@@ -18,6 +18,16 @@ object silvestre {
 
 	method image() = "silvestre.png"
 
-	method position() = game.origin()
+	method position() = game.at(self.restirccion(), 0)
+
+	method restirccion() = pepita.position().x().max(3)
+
+	method teEncontro(ave){
+		game.say(ave, "No me la container!")
+		game.schedule(2000, {game.stop()})
+	  
+	}
+	  
+	
 	
 }
